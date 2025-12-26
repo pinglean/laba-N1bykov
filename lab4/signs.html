@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Дорожные знаки</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        .tooltip {
+            /* position: relative;  - removed as it might interfere with image layout, checked requirements */
+        }
+
+
+
+        .ui-tooltip {
+            /* position: absolute; - jQuery UI сам позиционирует */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            z-index: 9999;
+            max-width: 300px;
+            box-shadow: 0 0 5px #aaa;
+        }
+
+        /* Стили из задания */
+        .tooltip-container {
+            /* Обертка если нужна? Нет, вешаем класс на img */
+        }
+
+        img.tooltip {
+            margin: 5px;
+            vertical-align: middle;
+            max-height: 100px;
+            /* ограничим размер для удобства просмотра */
+            cursor: help;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img.tooltip",
+                content: function () {
+                    var $element = $(this);
+                    if ($element.is("img")) {
+                        var hint = $element.data('hint');
+                        // Format: 1_1 -> 1.1, also handles existing dots if any
+                        if (hint) {
+                            return "Знак " + hint.toString().replace(/_/g, '.');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Дорожные знаки</h1>
+    <p>
+        <img src="img/signs/1_1.svg" class="tooltip" data-hint="1_1" alt="1_1">
+        <img src="img/signs/1_10.svg" class="tooltip" data-hint="1_10" alt="1_10">
+        <img src="img/signs/1_11_1.svg" class="tooltip" data-hint="1_11_1" alt="1_11_1">
+        <img src="img/signs/1_11_2.svg" class="tooltip" data-hint="1_11_2" alt="1_11_2">
+        <img src="img/signs/1_12_1.svg" class="tooltip" data-hint="1_12_1" alt="1_12_1">
+    </p>
+    <p>
+        <img src="img/signs/1_12_2.svg" class="tooltip" data-hint="1_12_2" alt="1_12_2">
+        <img src="img/signs/1_13.svg" class="tooltip" data-hint="1_13" alt="1_13">
+        <img src="img/signs/1_14.svg" class="tooltip" data-hint="1_14" alt="1_14">
+        <img src="img/signs/1_15.svg" class="tooltip" data-hint="1_15" alt="1_15">
+        <img src="img/signs/1_16.svg" class="tooltip" data-hint="1_16" alt="1_16">
+    </p>
+    <p>
+        <img src="img/signs/1_17.svg" class="tooltip" data-hint="1_17" alt="1_17">
+        <img src="img/signs/1_18.svg" class="tooltip" data-hint="1_18" alt="1_18">
+        <img src="img/signs/1_19.svg" class="tooltip" data-hint="1_19" alt="1_19">
+        <img src="img/signs/1_2.svg" class="tooltip" data-hint="1_2" alt="1_2">
+        <img src="img/signs/1_20_1.svg" class="tooltip" data-hint="1_20_1" alt="1_20_1">
+    </p>
+    <p>
+        <img src="img/signs/1_20_2.svg" class="tooltip" data-hint="1_20_2" alt="1_20_2">
+        <img src="img/signs/1_20_3.svg" class="tooltip" data-hint="1_20_3" alt="1_20_3">
+        <img src="img/signs/1_21.svg" class="tooltip" data-hint="1_21" alt="1_21">
+        <img src="img/signs/1_22.svg" class="tooltip" data-hint="1_22" alt="1_22">
+        <img src="img/signs/1_23.svg" class="tooltip" data-hint="1_23" alt="1_23">
+    </p>
+    <p>
+        <img src="img/signs/1_24.svg" class="tooltip" data-hint="1_24" alt="1_24">
+        <img src="img/signs/1_25.svg" class="tooltip" data-hint="1_25" alt="1_25">
+        <img src="img/signs/1_26.svg" class="tooltip" data-hint="1_26" alt="1_26">
+        <img src="img/signs/1_27.svg" class="tooltip" data-hint="1_27" alt="1_27">
+        <img src="img/signs/1_28.svg" class="tooltip" data-hint="1_28" alt="1_28">
+    </p>
+    <p>
+        <img src="img/signs/1_29.svg" class="tooltip" data-hint="1_29" alt="1_29">
+        <img src="img/signs/1_30.svg" class="tooltip" data-hint="1_30" alt="1_30">
+        <img src="img/signs/1_31.svg" class="tooltip" data-hint="1_31" alt="1_31">
+        <img src="img/signs/1_32.svg" class="tooltip" data-hint="1_32" alt="1_32">
+        <img src="img/signs/1_33.svg" class="tooltip" data-hint="1_33" alt="1_33">
+    </p>
+    <p>
+        <img src="img/signs/1_34_1.svg" class="tooltip" data-hint="1_34_1" alt="1_34_1">
+        <img src="img/signs/1_34_2.svg" class="tooltip" data-hint="1_34_2" alt="1_34_2">
+        <img src="img/signs/1_34_3.svg" class="tooltip" data-hint="1_34_3" alt="1_34_3">
+        <img src="img/signs/1_35.svg" class="tooltip" data-hint="1_35" alt="1_35">
+        <img src="img/signs/1_3_1.svg" class="tooltip" data-hint="1_3_1" alt="1_3_1">
+    </p>
+    <p>
+        <img src="img/signs/1_3_2.svg" class="tooltip" data-hint="1_3_2" alt="1_3_2">
+        <img src="img/signs/1_4_1.svg" class="tooltip" data-hint="1_4_1" alt="1_4_1">
+        <img src="img/signs/1_4_2.gif" class="tooltip" data-hint="1_4_2" alt="1_4_2">
+        <img src="img/signs/1_4_3.gif" class="tooltip" data-hint="1_4_3" alt="1_4_3">
+        <img src="img/signs/1_4_4.gif" class="tooltip" data-hint="1_4_4" alt="1_4_4">
+    </p>
+    <p>
+        <img src="img/signs/1_4_5.gif" class="tooltip" data-hint="1_4_5" alt="1_4_5">
+        <img src="img/signs/1_4_6.gif" class="tooltip" data-hint="1_4_6" alt="1_4_6">
+        <img src="img/signs/1_5.svg" class="tooltip" data-hint="1_5" alt="1_5">
+        <img src="img/signs/1_6.svg" class="tooltip" data-hint="1_6" alt="1_6">
+        <img src="img/signs/1_7.svg" class="tooltip" data-hint="1_7" alt="1_7">
+    </p>
+    <p>
+        <img src="img/signs/1_8.svg" class="tooltip" data-hint="1_8" alt="1_8">
+        <img src="img/signs/1_9.svg" class="tooltip" data-hint="1_9" alt="1_9">
+        <img src="img/signs/2_1.svg" class="tooltip" data-hint="2_1" alt="2_1">
+        <img src="img/signs/2_2.svg" class="tooltip" data-hint="2_2" alt="2_2">
+        <img src="img/signs/2_3_1.svg" class="tooltip" data-hint="2_3_1" alt="2_3_1">
+    </p>
+    <p>
+        <img src="img/signs/2_3_2.gif" class="tooltip" data-hint="2_3_2" alt="2_3_2">
+        <img src="img/signs/2_3_3.gif" class="tooltip" data-hint="2_3_3" alt="2_3_3">
+        <img src="img/signs/2_3_4.gif" class="tooltip" data-hint="2_3_4" alt="2_3_4">
+        <img src="img/signs/2_3_5.gif" class="tooltip" data-hint="2_3_5" alt="2_3_5">
+        <img src="img/signs/2_3_6.gif" class="tooltip" data-hint="2_3_6" alt="2_3_6">
+    </p>
+    <p>
+        <img src="img/signs/2_3_7.gif" class="tooltip" data-hint="2_3_7" alt="2_3_7">
+        <img src="img/signs/2_4.svg" class="tooltip" data-hint="2_4" alt="2_4">
+        <img src="img/signs/2_5.svg" class="tooltip" data-hint="2_5" alt="2_5">
+        <img src="img/signs/2_6.svg" class="tooltip" data-hint="2_6" alt="2_6">
+        <img src="img/signs/2_7.svg" class="tooltip" data-hint="2_7" alt="2_7">
+    </p>
+    <p>
+        <img src="img/signs/3_1.svg" class="tooltip" data-hint="3_1" alt="3_1">
+        <img src="img/signs/3_10.svg" class="tooltip" data-hint="3_10" alt="3_10">
+        <img src="img/signs/3_11.svg" class="tooltip" data-hint="3_11" alt="3_11">
+        <img src="img/signs/3_12.svg" class="tooltip" data-hint="3_12" alt="3_12">
+        <img src="img/signs/3_13.svg" class="tooltip" data-hint="3_13" alt="3_13">
+    </p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ценообразование Bykov</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Bykov Prices</div>
+            <div class="view-switcher">
+                <label for="viewSelect">Представление:</label>
+                <select id="viewSelect">
+                    <option value="desktop">Desktop</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Ценообразование</h1>
+            <p class="subtitle">выберите план, соответствующий вашим потребностям</p>
+        </header>
+
+        <section class="pricing-container" id="pricingContainer">
+            <!-- Basic Plan -->
+            <div class="pricing-card basic">
+                <div class="card-header">
+                    <h3>Базовый план</h3>
+                    <div class="price-block">
+                        <span class="currency">190</span>
+                        <span class="unit">рублей</span>
+                        <span class="period">Помесячно<br><span class="discount">Скидка 10% на годовую
+                                подписку</span></span>
+                    </div>
+                    <div class="divider"></div>
+                    <p class="description">Идеально подходит для людей, которым нужен быстрый доступ к основным
+                        функциям.</p>
+                </div>
+                <button class="btn btn-basic">Выбрать план</button>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card professional">
+                <div class="card-header">
+                    <h3>Профессиональный план</h3>
+                    <div class="price-block">
+                        <span class="currency">490</span>
+                        <span class="unit">рублей</span>
+                        <span class="period">Помесячно<br><span class="discount">Скидка 10% на годовую
+                                подписку</span></span>
+                    </div>
+                    <div class="divider"></div>
+                    <p class="description">Идеально подходит для людей, которым требуются расширенные функции и
+                        инструменты для работы с клиентами.</p>
+                </div>
+                <button class="btn btn-professional">Выбрать план</button>
+                <div class="features">
+                    <ul>
+                        <li><span class="check">✔</span> 300 поколений изображений</li>
+                        <li><span class="check">✔</span> 300 кредитов</li>
+                        <li><span class="check">✔</span> Ежемесячно 1000 кредитов бесплатно</li>
+                        <li><span class="check">✔</span> Поддержка клиентов</li>
+                        <li><span class="check">✔</span> Выделенный сервер</li>
+                        <li><span class="check">✔</span> Приоритетные поколения</li>
+                        <li><span class="check">✔</span> 500 ГБ облачного хранилища</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Advanced Plan (Right one) -->
+            <div class="pricing-card advanced">
+                <div class="card-header">
+                    <h3>Профессиональный план</h3>
+                    <!-- Using same name as per user image or likely typo, but will distinguish visually -->
+                    <div class="price-block">
+                        <span class="currency">990</span>
+                        <span class="unit">рублей</span>
+                        <span class="period">Помесячно<br><span class="discount">Скидка 10% на годовую
+                                подписку</span></span>
+                    </div>
+                    <div class="divider"></div>
+                    <p class="description">Идеально подходит для предприятий, которым требуется персонализированные
+                        услуги и безопасность для больших коллективов.</p>
+                </div>
+                <button class="btn btn-advanced">Выбрать план</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
